@@ -57,23 +57,103 @@
     margin-bottom: 35px;
     padding-left: 80px;
 }
-.banner .sign_up .form .number_qz{
+.banner .sign_up .form #number_down{
+    display: block;
     width: 70px;
-    height: 42px;
+    line-height: 42px;
     position: absolute;
     top:200px;
-    left: 34px;
-    border: none;
-    border-right: solid 1px lightgray;
+    left: 33px;
     text-align: center;
-
+    font-size: 14px;
+    color: rgb(158, 156, 156);
+    border-right: solid 1px lightgray;
+    cursor: pointer;
+}
+.banner .sign_up .form #number_down .number_list{
+    width: 300px;
+    height:200px;
+    border-radius: 2px;
+    border: solid 1px lightgray;
+    text-align: left;
+    background: #fff;
+    position: absolute;
+    top:45px;
+    color: #000;
+    overflow: auto;
+    display: none;
+}
+.banner .sign_up .form #number_down .number_list li:nth-child(1){
+    line-height: 30px;
+    background: rgb(248, 243, 243);
+    padding: 0 30px 0 10px;
+}
+.banner .sign_up .form #number_down .number_list li a{
+    
+    display: block;
+    display: flex;
+    justify-content: space-between; 
+    width: 260px;
+    line-height: 30px;
+    color: #000;
+    padding: 0 30px 0 10px;
+}
+.banner .sign_up .form #number_down .number_list li a:hover{
+    background: rgb(238, 236, 236);
+}
+.banner .sign_up .form #number_down .icon-xjt{
+    margin-left: 5px;
+    font-size: 14px;
 }
 .banner .sign_up .form .yz{
-    width: 300px;
-    height: 42px;
+    width: 255px;
+    line-height: 42px;
+    padding-left: 45px;
     border-radius: 2px;
     border: solid 1px lightgray;
     margin-bottom: 35px;
+    background-image: linear-gradient(180deg, #ffffff 0%,#f3f3f3 100%);
+    position: relative;
+    cursor: pointer; 
+}
+.banner .sign_up .form .yz a{
+    color: #3873ff;
+}
+.banner .sign_up .form .yz .yz_left .quan_blue{
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/sign_up/elements.png) no-repeat;
+    background-position: -97px -128px;
+    position: absolute;
+    left: 12px;
+    top:11px;
+    z-index: 2;
+}
+.banner .sign_up .form .yz .yz_left .quan_wc{
+    display: block;
+    width:25px;
+    height: 25px;
+    background-color: #c6d5f8;
+    border: solid 1px #3873ff;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top:7px;
+   
+}
+.banner .sign_up .form .yz:hover{
+    background-image: linear-gradient(0deg, #ffffff 0%,#f3f3f3 100%);
+}
+.banner .sign_up .form .yz .yz_right{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/sign_up/sprite.1.5.3.png) no-repeat;
+    background-position: 0 -105px;
+    position: absolute;
+    right: 12px;
+    top:11px;
 }
 .banner .sign_up .form .ts{
     width: 300px;
@@ -90,6 +170,10 @@
     background:  rgb(17, 145, 224);
     color: #fff;
     margin-top: 15px;
+    cursor: pointer;
+}
+.banner .sign_up .form .sub:hover{
+    background:#2b8cc5;
 }
 .banner .sign_up .dl{
     color: rgb(17, 145, 224);
