@@ -6,9 +6,7 @@
 #nav_wrapper{
 	height: 82px;
 	margin: 0 auto;
-	position: absolute;
-	left: 10px;
-	top: 0;
+	position: relative;
 	z-index: 9;
 }
 .nav{
@@ -17,6 +15,9 @@
 	flex-direction:row;
 	justify-content: space-between;
 	align-items: center;
+	position: absolute;
+	left:10px;
+	top: 0;
 }
 .nav .right{
 	width: 920px;
@@ -98,21 +99,56 @@
 	right: -5px;
 }
 #banner_wrapper{
-	height: 670px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .banners{
-	height: 670px;
+	height:100%;
+	width: 100%;
 	overflow: hidden;
-
-}
-.banners ul{
-	height: 670px;
-	width:999999999px;
 	position: relative;
 }
-.banners li img{
-	height: 670px;
+.banners .lunbo{
+	height:100%;
+	width: 100%;
 	position: absolute;
-	left:-660px;
-	top: 0;
+	top:0;
+	left:0;
+}
+.banners .lunbo li{
+	float: left;
+	height: 100%;
+	width: 100%;
+	
+}
+.banners .lunbo li img{
+	height:670px; 
+	
+}
+
+.banners .banner_btn{
+	width: 150px;
+	position: absolute;
+	bottom: 25px;
+	left: 44%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.banners .banner_btn li{
+	float: left;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
+}
+.banners .banner_btn .btns{
+	background: none;
+	width: 9px;
+	height: 9px;
+	border: solid 1px #fff;
+	border-radius: 50%;
 }
