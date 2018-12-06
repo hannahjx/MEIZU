@@ -54,7 +54,6 @@ var checkInput_up=(function (){
                 $form['tel'].oninput=function(){
                     if(this.value!=''){
                         $error1.style.display="none";
-                        // $error1.innerHTML=`<span class="title"><img class="left" src="images/sign_up/error-ico.png"/>内容不能为空<img class="right" src="images/sign_up/close-ico.png"/></span>`;
                     }
                 }
                 $yz.onclick=function(){
@@ -65,17 +64,21 @@ var checkInput_up=(function (){
                     var _this = this;
                     let user=$username.value;
                     console.log(user);
-                    
+                    // debugger
                     sendAjax('php/sign_up.php',{data:{
                         username:user
-                    }}).then(res =>{                        
+                    }}).then(res =>{
+                        res = JSON.parse(res);                        
                         if(res.code==0){
                             $form['onsubmit'] = 'return';
+                            $sub.innerHTML = '注册完成，立即登录';
+                            // window.location.href="http://localhost:8888/MEIZU/sign_in.html";
                         }else{
                             $error1.style.display="block";
                             $error1.innerHTML=`<span class="title"><img class="left" src="images/sign_up/error-ico.png"/>手机号已存在,请直接登录<img class="right" src="images/sign_up/close-ico.png"/></span>`;
                             return false;
                         }
+                        console.log(res);
                     })
                     // if($error1.style.display == "none" && $error2.style.display == "none"){
                     //     $form['onsubmit'] = 'return';

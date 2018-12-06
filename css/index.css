@@ -113,7 +113,7 @@
 }
 .banners .lunbo{
 	height:100%;
-	width: 100%;
+	width: 99999px;
 	position: absolute;
 	top:0;
 	left:0;
@@ -121,12 +121,15 @@
 .banners .lunbo li{
 	float: left;
 	height: 100%;
-	width: 100%;
+	width: 1366px;
+	overflow: hidden;
+	position: relative;
 	
 }
 .banners .lunbo li img{
-	height:670px; 
-	
+	height:670px;
+	position: absolute;
+	left: -560px;
 }
 
 .banners .banner_btn{
@@ -139,11 +142,13 @@
 	align-items: center;
 }
 .banners .banner_btn li{
+	cursor: pointer;
 	float: left;
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
 	background: #fff;
+	z-index: 10;
 }
 .banners .banner_btn .btns{
 	background: none;
