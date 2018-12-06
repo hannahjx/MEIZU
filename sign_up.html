@@ -21,7 +21,7 @@
                 <h3>注册&nbsp;Flyme&nbsp;账号</h3>
                 <div class="error1"><span class="title"><img class="left" src="images/sign_up/error-ico.png"/>内容不能为空<img class="right" src="images/sign_up/close-ico.png"/></span></div>
                 <div class="error2"><span class="title"><img class="left" src="images/sign_up/error-ico.png"/>请输入合法的手机号码<img class="right" src="images/sign_up/close-ico.png"/></span></div>
-               <form action="php/sign_upCheck.php" class="form">
+               <form action="php/sign_upCheck.php" class="form" onsubmit="return false">
                    <input type="text" class="txt" placeholder="手机号码" name="tel"/>
                     <span id="number_down">+86<i class="iconfont icon-xjt"></i>
                         <div class="box">
@@ -53,10 +53,9 @@
                              <a href="#">验证成功</a>
                              <a href="https://www.geetest.com/first_page/" class="yz_right2"></a>
                         </span>
-                   </span>
-                  
+                   </span>                  
                    <p class="ts">点击立即注册，即表示您同意并愿意遵守<a href="https://i.flyme.cn/serviceAgreement">Flyme服务协议</a>&nbsp;和<a href="https://www.meizu.com/legal.html">&nbsp;法律声明</a></p>
-                   <input type="submit" class="sub" value="立即注册" name="submit"/>
+                   <button type="submit" class="sub" name="submit">立即注册</button>
                </form>
                <a href="sign_in.html" class="dl">登录</a>
             </div>
@@ -66,7 +65,7 @@
 <script src='js/common.js'></script>
 <script src="js/move1.1.0.js"></script>
 <script src='js/checkInput_up.js'></script>
-<script src="js/ajax0.1.0.js"></script>
+<script src="js/ajax2.0.js"></script>
 <script>
     checkInput_up.init();
 </script>

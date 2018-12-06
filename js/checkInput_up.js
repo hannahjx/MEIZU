@@ -40,10 +40,11 @@ var checkInput_up=(function (){
                 $form['tel'].onblur=function(){
                     var reg=/^1[3456789]\d{9}$/;
                     if(reg.test(this.value)){
+                        $error2.style.display='none';
+                        $error1.style.display='none';
                     }else{
                         $error2.style.display='block';
-                        $error1.style.display='none';
-                        
+                        $error1.style.display='none';                       
                     }
                     if(this.value==''){
                         $error1.style.display='block';
@@ -53,6 +54,7 @@ var checkInput_up=(function (){
                 $form['tel'].oninput=function(){
                     if(this.value!=''){
                         $error1.style.display="none";
+                        // $error1.innerHTML=`<span class="title"><img class="left" src="images/sign_up/error-ico.png"/>内容不能为空<img class="right" src="images/sign_up/close-ico.png"/></span>`;
                     }
                 }
                 $yz.onclick=function(){
@@ -60,23 +62,25 @@ var checkInput_up=(function (){
                     move($yz2,{width:255,height:42},200);
                 }
                 $sub.onclick=function(){
+                    var _this = this;
                     let user=$username.value;
                     console.log(user);
+                    
                     sendAjax('php/sign_up.php',{data:{
                         username:user
-                    }}).then(res=>{
-                        
-                        res=JSON.parse(res);
+                    }}).then(res =>{                        
                         if(res.code==0){
-                            alert('新用户');
+                            $form['onsubmit'] = 'return';
                         }else{
-                            alert('用户名已存在，请重新输入');
+                            $error1.style.display="block";
+                            $error1.innerHTML=`<span class="title"><img class="left" src="images/sign_up/error-ico.png"/>手机号已存在,请直接登录<img class="right" src="images/sign_up/close-ico.png"/></span>`;
                             return false;
                         }
                     })
-                }
-                    
-            
+                    // if($error1.style.display == "none" && $error2.style.display == "none"){
+                    //     $form['onsubmit'] = 'return';
+                    // }
+                }                        
         }
     }
 }())
