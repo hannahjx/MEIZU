@@ -13,6 +13,8 @@ var checkInput_up=(function (){
     var $yzm_word=document.querySelector('.yzm_word');
     var $yzm_num=document.querySelector('.yzm_num');
     var $num=document.querySelector('.num');
+    var $sign_up=document.querySelector('.sign_up');
+    var $close=document.querySelectorAll('.right');
     return{
         init(){
             this.event();
@@ -58,7 +60,7 @@ var checkInput_up=(function (){
                     if(this.value!=''){
                         $error1.style.display="none";
                         $error2.style.display='none';
-                        $error3.style.display='none';
+                        // $error3.style.display='none';
                     }
                 }
                 $yzm.oninput=function(){
@@ -66,7 +68,7 @@ var checkInput_up=(function (){
                     }else{
                         $error1.style.display='none';
                         $error2.style.display='none';
-                        $error3.style.display='block';
+                        // $error3.style.display='block';
                     }
                 }
                 $yzm_word.onclick=function(){
@@ -84,6 +86,12 @@ var checkInput_up=(function (){
                         }
                    },10);
                    
+                }
+                $sign_up.onclick=function(e){
+                    var target=e.target||e.srcElement;
+                    if(target.className=='right'){
+                        target.parentNode.parentNode.style.display='none';
+                    }
                 }
                 $yz.onclick=function(){
                     $yz2.style.display='block';

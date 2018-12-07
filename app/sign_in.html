@@ -1,4 +1,79 @@
-.content{
-	margin: 0 auto;
-	width: 1240px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flyme账号-登录</title>
+    <link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/sign_in.css">
+</head>
+<body>
+    <div id="header_wrapper">
+        <div class="header content">
+          <h2><a href="index.html"><img src="static/images/logo1.png"/></a></h2>
+      </div>
+    </div>
+    <div id="banner_wrapper">
+        <div class="banner">
+            <div class="sign_up">
+				<strong class="erm"><a href="sign_in2.html"><img src="static/images/sigb_in/erm.png"/></a></strong>
+                <h3>验证码登录</h3>
+                <div class="error1"><span class="title"><img class="left" src="static/images/sign_up/error-ico.png"/>该手机号码尚未注册，<a href="sign_up.html">立即注册</a><img class="right" src="static/images/sign_up/close-ico.png"/></span></div>
+                <div class="error2"><span class="title"><img class="left" src="static/images/sign_up/error-ico.png"/>请点击按钮进行验证<img class="right" src="static/images/sign_up/close-ico.png"/></span></div>
+                <div class="error3"><span class="title"><img class="left" src="static/images/sign_up/error-ico.png"/>请输入正确的验证码<img class="right" src="static/images/sign_up/close-ico.png"/></span></div>
+                <form action="../server/php/sign_upCheck.php" class="form">
+                   <input type="text" class="txt" placeholder="手机号码" name="tel"/>
+                    <input type="text" class="yzm" placeholder="验证码" maxlength="6" minlength="6"/>
+                    <i class="yzm_shu"></i>
+                    <a href="#" class="yzm_word">获取验证码</a>
+                    <span class="yzm_num"><i class="num">60</i>秒后重新获取</span>
+                    <span id="number_down">+86<i class="iconfont icon-xjt"></i>
+                        <div class="box">
+                            <ul class="number_list">
+                                <li>常用</li>
+                                <li><a href="#">中国<i>+86</i></a></li>
+                                <li><a href="#">中国台湾<i>+886</i></a></li>
+                                <li><a href="#">中国香港<i>+852</i></a></li>
+                                <li><a href="#">中国台湾<i>+886</i></a></li>
+                                <li><a href="#">中国香港<i>+852</i></a></li>
+                                <li><a href="#">中国台湾<i>+886</i></a></li>
+                                <li><a href="#">中国香港<i>+852</i></a></li>
+                                <li><a href="#">中国台湾<i>+886</i></a></li>
+                                <li><a href="#">中国香港<i>+852</i></a></li>
+                            </ul>
+                      </div>
+                    </span>
+                   <span class="yz_in">
+                       <span class="yz_left">
+                           <i class="quan_blue"></i>
+                           <i class="quan_wc"></i>
+                       </span>
+                        <p>点击按钮进行验证</p>
+                        <a href="https://www.geetest.com/first_page/" class="yz_right"></a>
+                        <span class="yz2">
+                            <span class="yz_left2">
+                                <i class="gou"></i>
+                            </span>
+                             <a href="#">验证成功</a>
+                             <a href="https://www.geetest.com/first_page/" class="yz_right2"></a>
+                        </span>
+                   </span>
+                
+                   <input type="submit" class="sub_in" value="登录" name="submit"/>
+               </form>
+               <a href="sign_up.html" class="dl">注册</a>
+               <a href="https://i.flyme.cn/forgetpwd" class="forget">忘记密码？</a>
+            </div>
+      </div>
+    </div>
+</body>
+<script src='static/js/common.js'></script>
+<script src="static/js/move1.1.0.js"></script>
+<script src='static/js/checkIput_in.js'></script>
+<script src="static/js/ajax2.0.js"></script>
+<script>
+    checkInput_up.init();
+</script>
+</html>

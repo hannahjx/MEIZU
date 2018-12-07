@@ -9,7 +9,9 @@ var checkInput_up=(function (){
     var $error2=document.querySelector('.error2');
     var $username=document.querySelector('.txt');
     var $sub=document.querySelector('.sub');
-    var $erroe_close=document.querySelector('.right');
+    var $sign_up=document.querySelector('.sign_up');
+    var $close=document.querySelectorAll('.right');
+    console.log($close);
     return{
         init(){
             this.event();
@@ -41,10 +43,11 @@ var checkInput_up=(function (){
                 $form['tel'].onblur=function(){
                     var reg=/^1[3456789]\d{9}$/;
                     if(reg.test(this.value)){
+                        $error2.style.display='none';
+                        $error1.style.display='none';
                     }else{
                         $error2.style.display='block';
-                        $error1.style.display='none';
-                        
+                        $error1.style.display='none';                       
                     }
                     if(this.value==''){
                         $error1.style.display='block';
@@ -54,35 +57,42 @@ var checkInput_up=(function (){
                 $form['tel'].oninput=function(){
                     if(this.value!=''){
                         $error1.style.display="none";
-                        $error2.style.display='none';
                     }
                 }
-                $erroe_close.onclick=function(){
-                     $error1.style.display="none";
-                        $error2.style.display='none';
+                $sign_up.onclick=function(e){
+                    var target=e.target||e.srcElement;
+                    if(target.className=='right'){
+                        target.parentNode.parentNode.style.display='none';
+                    }
                 }
                 $yz.onclick=function(){
                     $yz2.style.display='block';
                     move($yz2,{width:255,height:42},200);
                 }
                 $sub.onclick=function(){
+                    var _this = this;
                     let user=$username.value;
                     console.log(user);
-                    sendAjax('php/sign_up.php',{data:{
+                    // debugger
+                    sendAjax('../server/php/sign_up.php',{data:{
                         username:user
-                    }}).then(res=>{
-                        
-                        res=JSON.parse(res);
+                    }}).then(res =>{
+                        res = JSON.parse(res);                        
                         if(res.code==0){
-                            alert('新用户');
+                            $form['onsubmit'] = 'return';
+                            $sub.innerHTML = '注册完成，立即登录';
+                            // window.location.href="http://localhost:8888/MEIZU/sign_in.html";
                         }else{
-                            alert('用户名已存在，请重新输入');
+                            $error1.style.display="block";
+                            $error1.innerHTML=`<span class="title"><img class="left" src="static/images/sign_up/error-ico.png"/>手机号已存在,请直接登录<img class="right" src="static/images/sign_up/close-ico.png"/></span>`;
                             return false;
                         }
+                        console.log(res);
                     })
-                }
-                    
-            
+                    // if($error1.style.display == "none" && $error2.style.display == "none"){
+                    //     $form['onsubmit'] = 'return';
+                    // }
+                }                        
         }
     }
 }())

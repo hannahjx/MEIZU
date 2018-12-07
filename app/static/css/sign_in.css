@@ -309,3 +309,10 @@
     left: 34px;
     bottom:16px;
 }
+.banner .sign_up .forget{
+    color: rgb(17, 145, 224);
+    font-size: 14px;
+    position: absolute;
+    right: 34px;
+    bottom:16px;
+}
