@@ -104,6 +104,9 @@
     margin-bottom: 20px;
     padding-left: 80px;
 }
+.banner .sign_up .form .yzmbox{
+    display: none;
+}
 .banner .sign_up .form .yzm{
     width: 290px;
     height: 45px;
@@ -130,6 +133,7 @@
     position: absolute;
     top:243px;
     left: 196px;
+    cursor: pointer;
 }
 .banner .sign_up .form .yzm_num{
     width: 130px;
@@ -194,7 +198,7 @@
     background: rgb(238, 236, 236);
 }
 .banner .sign_up .form #number_down .icon-xjt{
-    margin-left: 30px;
+    margin-left: 5px;
     font-size: 14px;
 }
 .banner .sign_up .form .yz_in{
@@ -206,7 +210,7 @@
     background-image: linear-gradient(180deg, #ffffff 0%,#f3f3f3 100%);
     position: relative;
     cursor: pointer; 
-    /* display: none; */
+    display: none;
 }
 .banner .sign_up .form .yz_in p{
     color: #3873ff;

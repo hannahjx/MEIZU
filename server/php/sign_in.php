@@ -11,7 +11,6 @@ $row=$result->fetch_assoc();
 
 if($row){
     $arr=array("code" =>"10000" ,"data"=>"");
-    $spl1 = 'delete from meizu_userinfo where ';
 }else{
     $arr=array("code"=>"0", "data"=>"");
 }
