@@ -1,0 +1,54 @@
+.content{
+	margin: 0 auto;
+    width: 1240px;
+}
+#header_wrapper{
+    height:68px ;
+    background: #fff;
+}
+.header{
+    height:68px ;
+    position: relative;
+}
+.header h2 a img{
+   position: absolute;
+   top:22px;
+   left: 15px;
+}
+#banner_wrapper{
+    height: 750px;
+    background: url(../images/sign_up/zc_banner.png);
+    background-size: cover;
+}
+.banner{
+    height: 750px;
+    background: url(../images/sign_up/zc_banner.png);
+    background-size: cover;
+    position: relative;
+}
+.banner .sign_up{
+    width: 368px;
+    height: 477px;
+    background: #fff;
+    position: absolute;
+    top:105px;
+    right: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner .sign_up .phone{
+    position: absolute;
+    right: 5px;
+    top:5px;
+}
+.banner .sign_up h3{
+    margin-top:70px;
+    font-size: 18px;
+    color: #32a5e7;
+}
+.banner .sign_up .title{
+    width: 280px;
+    font-size: 16px;
+    color: #999999;
+}

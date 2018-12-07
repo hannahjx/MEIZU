@@ -1,6 +1,6 @@
 .content{
 	margin: 0 auto;
-    width: 1200px;
+	width: 1240px;
 }
 #header_wrapper{
     height:68px ;
@@ -13,7 +13,7 @@
 .header h2 a img{
    position: absolute;
    top:22px;
-   left: 0;
+   left: 15px;
 }
 #banner_wrapper{
     height: 750px;
@@ -28,7 +28,7 @@
 }
 .banner .sign_up{
     width: 368px;
-    height: 517px;
+    height: 470px;
     background: #fff;
     position: absolute;
     top:105px;
@@ -37,10 +37,16 @@
     flex-direction: column;
     align-items: center;
 }
+.banner .sign_up .erm{
+    position: absolute;
+    right: 8px;
+    top:8px;
+}
 .banner .sign_up h3{
     margin-top:70px;
-    font-size: 18px;
-    color: rgb(17, 145, 224);
+    font-size: 21px;
+    font-weight: bold;
+    color: #515151;
 }
 .banner .sign_up .error1{
     position: absolute;
@@ -48,7 +54,16 @@
     left: 30px;
     display: none;
 }
+.banner .sign_up .error1 a{
+    color: #32a5e7;
+} 
 .banner .sign_up .error2{
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    display: none;
+}
+.banner .sign_up .error3{
     position: absolute;
     top: 120px;
     left: 30px;
@@ -75,28 +90,66 @@
     right: 13px;
 }
 .banner .sign_up .form{
-    height: 300px;
+    height: 252px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 105px;
+    margin-top: 75px;
 }
 .banner .sign_up .form .txt{
     width: 220px;
-    height: 42px;
+    height: 45px;
     border-radius: 2px;
     border: solid 1px lightgray;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding-left: 80px;
+}
+.banner .sign_up .form .yzm{
+    width: 290px;
+    height: 45px;
+    border-radius: 2px;
+    border: solid 1px lightgray;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    /* display: none; */
+}
+.banner .sign_up .form .yzm_shu{
+    display: block;
+    position: absolute;
+    top:250px;
+    left: 188px;
+    height: 25px;
+    width: 1px;
+    border-left: solid 1px #dadada;
+}
+.banner .sign_up .form .yzm_word{
+    width: 130px;
+    line-height: 38px;
+    text-align: center;
+    color: #32a5e7;
+    position: absolute;
+    top:243px;
+    left: 196px;
+}
+.banner .sign_up .form .yzm_num{
+    width: 130px;
+    line-height: 38px;
+    text-align: center;
+    color: #888888;
+    position: absolute;
+    top:243px;
+    left: 196px;
+    display: none;
 }
 .banner .sign_up .form #number_down{
     display: block;
-    width: 70px;
-    line-height: 42px;
+    width: 55px;
+    line-height: 22px;
     position: absolute;
-    top:200px;
+    top:185px;
     left: 33px;
-    text-align: center;
+    text-align: left;
+    padding-left: 15px;
     font-size: 14px;
     color: rgb(158, 156, 156);
     border-right: solid 1px lightgray;
@@ -106,7 +159,8 @@
     border-radius: 2px;
     border: solid 1px lightgray;
     position: absolute;
-    top:45px;
+    top:33px;
+    left:0px;
     overflow: hidden;
 }
 .banner .sign_up .form #number_down .number_list{
@@ -115,7 +169,8 @@
     text-align: left;
     background: #fff;
     position: absolute;
-    top:0;
+    top:0px;
+    left:0px;
     color: #000;
     overflow: auto; 
     display: block;
@@ -127,7 +182,6 @@
     padding: 0 30px 0 10px;
 }
 .banner .sign_up .form #number_down .number_list li a{
-    
     display: block;
     display: flex;
     justify-content: space-between; 
@@ -140,24 +194,24 @@
     background: rgb(238, 236, 236);
 }
 .banner .sign_up .form #number_down .icon-xjt{
-    margin-left: 5px;
+    margin-left: 30px;
     font-size: 14px;
 }
-.banner .sign_up .form .yz{
+.banner .sign_up .form .yz_in{
     width: 255px;
     line-height: 42px;
     padding-left: 45px;
     border-radius: 2px;
     border: solid 1px lightgray;
-    margin-bottom: 35px;
     background-image: linear-gradient(180deg, #ffffff 0%,#f3f3f3 100%);
     position: relative;
     cursor: pointer; 
+    /* display: none; */
 }
-.banner .sign_up .form .yz p{
+.banner .sign_up .form .yz_in p{
     color: #3873ff;
 }
-.banner .sign_up .form .yz .yz_left .quan_blue{
+.banner .sign_up .form .yz_in .yz_left .quan_blue{
     display: block;
     width: 18px;
     height: 18px;
@@ -168,7 +222,7 @@
     top:11px;
     z-index: 2;
 }
-.banner .sign_up .form .yz .yz_left .quan_wc{
+.banner .sign_up .form .yz_in .yz_left .quan_wc{
     display: block;
     width:25px;
     height: 25px;
@@ -180,10 +234,10 @@
     top:7px;
    
 }
-.banner .sign_up .form .yz:hover{
+.banner .sign_up .form .yz_in:hover{
     background-image: linear-gradient(0deg, #ffffff 0%,#f3f3f3 100%);
 }
-.banner .sign_up .form .yz .yz_right{
+.banner .sign_up .form .yz_in .yz_right{
     display: block;
     width: 20px;
     height: 20px;
@@ -194,8 +248,6 @@
     top:11px;
 }
 .banner .sign_up .form .yz2{
-    /* width: 255px;
-    line-height: 42px; */
     padding-left: 45px;
     border-radius: 2px;
     border: solid 1px #26c267;
@@ -237,17 +289,17 @@
     color: rgb(17, 145, 224);
     font-size: 11px;
 }
-.banner .sign_up .form .sub{
+.banner .sign_up .form .sub_in{
     width: 300px;
-    height: 42px;
+    height: 50px;
+    margin-top: 20px;
     border-radius: 2px;
     border: solid 1px lightgray;
     background:  rgb(17, 145, 224);
     color: #fff;
-    margin-top: 15px;
     cursor: pointer;
 }
-.banner .sign_up .form .sub:hover{
+.banner .sign_up .form .sub_in:hover{
     background:#2b8cc5;
 }
 .banner .sign_up .dl{
@@ -255,5 +307,5 @@
     font-size: 14px;
     position: absolute;
     left: 34px;
-    bottom:28px;
+    bottom:16px;
 }
