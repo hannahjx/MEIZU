@@ -1,4 +1,59 @@
-var swiper=(function(){
+//头部（导航条）区域
+var nav_swiper=(function(){
+    return{
+        init(ele){
+            this.$nav=$(ele);
+            this.$logo=this.$nav.find('.logo');
+            this.$logo1=this.$nav.find('.logo1');
+            this.$nav_list=$('.nav_list');
+            this.$hover_list=$('.hover_list');
+            this.$ul_bg=$('.ul_bg');
+            this.$search=$('.search');
+            this.$icon_wd=$('.icon-wd');
+            this.$icon_gwc=$('.icon-gwc');
+            // this.liAll=this.$nav_list.find('li');
+            this.event();
+        },
+        event(){
+            var _this=this;
+            this.$nav_list.on('mouseenter','li',function(){
+                _this.$logo.css('display','none');
+                _this.$logo1.css('display','block');
+                _this.$search.css('border','solid 1px #999');
+                _this.$icon_wd.css('color','#000');
+                _this.$icon_gwc.css('color','#999');
+                _this.$icon_gwc.find('i').css('color','#fff');
+                if($(this).attr('class')== 'APPstor'){
+                    _this.$ul_bg.css('height',274);
+                }else{
+                    _this.$ul_bg.css('height',274);
+                }
+                console.log(_this.$hover_list.eq(4));
+                _this.$nav_list.find('a').css('color','#000');
+                _this.$hover_list.find('a').css('color','#000');
+                $(this).find('a').css('color','#00C3F5');
+                $(this).find('ul').css('height',274);
+                $(this).find('.hover_list li').css({'display':'block','zIndex':99});
+                $(this).siblings().find('.hover_list li').css({'display':'none','zIndex':1});
+            })
+            this.$ul_bg.on('mouseleave',function(){
+                _this.$logo1.css('display','none');
+                _this.$logo.css('display','block');
+                _this.$search.css('border','solid 1px #fff');
+                _this.$icon_wd.css('color','#fff');
+                _this.$icon_gwc.css('color','#fff');
+                _this.$ul_bg.css('height',0);
+                _this.$nav_list.find('a').css('color','#fff');
+                _this.$hover_list.css('height',0);
+                _this.$hover_list.find('a').css('color','#000');
+                $(this).find('.hover_list li').css('display','none');
+            })
+        }
+    }
+}())
+nav_swiper.init('.nav');
+//banner区域
+var banner_swiper=(function(){
     var timer = null;
     var showWidth = null;
     return{
@@ -18,7 +73,6 @@ var swiper=(function(){
             this.$lunbo.css('left',-showWidth);      
             this.event();
             this.autoPlay(this.index);
-
         },
         event(){
             var _this=this;
@@ -49,7 +103,7 @@ var swiper=(function(){
             this.$btns.eq(index).addClass('btns').siblings().removeClass('btns');
             this.$lunbo.animate({
                 left: -showWidth * (index + 1)
-            }, 500)
+            }, 800)
         },
         autoPlay(index){
             var _this = this;
@@ -58,8 +112,8 @@ var swiper=(function(){
             timer = setInterval(function(){
                 _this.index++               
                 _this.showImage(_this.index);
-            },1000)
+            },5000)
         }
     }
 }())
-swiper.init('.banners');
+banner_swiper.init('.banners');
