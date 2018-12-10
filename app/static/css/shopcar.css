@@ -2,13 +2,23 @@
     width: 1240px;
     margin: 0 auto;
 }
+#nav_wrapper{
+    height: 80px;
+    background: #fff;
+}
+.nav{
+    height: 80px;
+    background: #fff;
+}
 .logo{
     float: left;
     width: 150px;
+    height: 100%;
 }
 .header-bread{
     float: left;
     margin-left: 30px;
+    height: 80px;
 }
 .header-bread li{
     float: left;
@@ -27,8 +37,228 @@
 .header-right{
     float: right;
     width: 247px;
+    height: 80px;
     display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    position: relative;
 }
-.header-right li{
+.header-right .member a{
+    display: block;
+    width: 117px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+.header-right .member:hover>a{
+    border: 1px solid #ccc;
+    border-bottom: 0;
+}
+.header-right .member .member-downmenu{
+    height: 0;
+    background: #fff;
+    position: absolute;
+    transition: height .2s linear,border-width .2s linear;
+    overflow: hidden;
+    z-index: 100;
+}
+.header-right .member:hover .member-downmenu{
+    display: block;
+    height: 200px;
+    border:1px solid #ccc;
+    border-top:0;
+}
+/* main部分开始—————————————————————————————————————————————— */
+#main-wrapper{
+    height: 440px;
+    background: #F4F6FA;
+}
+#main-wrapper .main{
+    min-height: 440px;
+    background: #F4F6FA;
+}
 
+#main-wrapper .main .main-content{
+    background-color:#fff;
+    display: table;
+    min-height: 360px;
+    width: 100%;
+    margin: 0 0 30px;
+    position: relative;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
+.main .main-content .empty-car{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .main-content .empty-car .carimg{
+    margin-right: 30px;
+}
+.main .main-content .empty-car .carword{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #666;
+    text-align: left;
+}
+.main .main-content .empty-car .carword p{
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+.main .main-content .empty-car .carword .tip-btn{
+    display: inline-block;
+    color: #00c3f5;
+    border:1px solid #00c3f5;
+    background-color: #fff;
+    line-height: 34px;
+    padding: 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#footer-wrapper{
+    height: 247px;
+    background: #fff;
+}
+#footer-wrapper .footer{
+    height: 247px;
+    background: #fff;
+}
+#footer-wrapper .footer .footer-top{
+    height: 143px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #efefef;
+}
+#footer-wrapper .footer .footer-top .footertop-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    justify-content: start;
+}
+#footer-wrapper .footer .footer-top .footertop-left a{
+    height: 69px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+#footer-wrapper .footer .footer-top .footertop-left a img{
+    width: 50px;
+    display: block;
+}
+#footer-wrapper .footer .footer-top .footertop-right{
+    text-align: right;
+}
+#footer-wrapper .footer .footer-top .footertop-right p:first-child{
+    color: #999;
+    line-height: 30px;
+}
+#footer-wrapper .footer .footer-top .footertop-right p:nth-child(2){
+    display: block;
+    color: #00c3f5;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: -6px;
+    line-height: 40px;
+}
+#footer-wrapper .footer .footer-top .footertop-right a{
+    display: inline-block;
+    height: 30px;
+    line-height: 28px;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    background-color: #00c3f5;
+    text-align: center;
+    transition: background-color .5s;
+    padding: 0 16px;
+    font-weight: 300;
+    cursor: pointer;
+}
+#footer-wrapper .footer .footer-bottom{
+    height: 80px;
+    width: 100%;
+}
+#footer-wrapper .footer .footer-bottom ul{
+    display: flex;
+    margin: 30px 0 9px 0;
+}
+#footer-wrapper .footer .footer-bottom ul li::after{
+    content: '|';
+    padding: 0 15px;
+    color: #a69999;
+    font-size: 12px;
+}#footer-wrapper .footer .footer-bottom ul li:last-child::after{
+    content: '';
+}
+#footer-wrapper .footer .footer-bottom ul li a{
+    font-size: 12px;
+    color: #a69999;
+    cursor: pointer;
+}
+#footer-wrapper .footer .footer-bottom p{
+    line-height: 23px;
+    color: #a69999;
+    display: inline-block;
+}
+#footer-wrapper .footer .footer-bottom p a{
+    font-size: 12px;
+    color: #a69999;
+}
+#footer-wrapper .footer .footer-bottom .ficon{
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+#footer-wrapper .footer .footer-bottom .ficon a{
+    padding: 0 10px;
+}
+#footer-wrapper .footer .footer-bottom .ficon a:nth-child(2) div{
+    padding: 5px;
+    position: absolute;
+    top: -200px;
+    left: -45px;
+    border:1px solid #efefef;
+    background: #fff;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+    transition: all 0.5s linear;
+}
+#footer-wrapper .footer .footer-bottom .ficon a:nth-child(2) div::before{
+    position: absolute;
+    left: 96px;
+    bottom: -8px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #efefef;
+}
+#footer-wrapper .footer .footer-bottom .ficon a:nth-child(2) div::after{
+    bottom: -7px;
+    border-top-color: #fff;
+}
+#footer-wrapper .footer .footer-bottom .ficon a:nth-child(2) div img{
+    width: 180px;
+}
+#footer-wrapper .footer .footer-bottom .ficon a:nth-child(2):hover div{
+    display: block;
+    height: 192px;
+}
+#footer-wrapper .footer .footer-bottom p span{
+    padding: 0 5px;
+}
+

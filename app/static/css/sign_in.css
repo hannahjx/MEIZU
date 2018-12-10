@@ -23,7 +23,7 @@
 .banner{
     height: 750px;
     background: url(../images/sign_up/zc_banner.png);
-    background-size: cover;
+    background-size: auto 750px;
     position: relative;
 }
 .banner .sign_up{
