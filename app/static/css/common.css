@@ -4,7 +4,7 @@
     border-top:1px solid #efefef; 
 }
 #footer-wrapper .footer{
-    height: 131px;
+    height: 80px;
     background: #fff;
     border-top:1px solid #efefef;
     display: flex;
@@ -55,12 +55,45 @@
     -moz-border-radius: 2px;
     text-align: center;
 }
+.footer .footer_r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -140px;
+}
+.footer .footer_r a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url('../images/sign_up/base.png');
+}
+.footer .footer_r a:first-child{
+    background-position: -218px -91px; 
+}
+.footer .footer_r a:first-child:hover{
+    background-position-y: -137px;
+}
+.footer .footer_r a:nth-child(2){
+    margin: 0 10px;
+    background-position: -302px -91px;
+}
+.footer .footer_r a:nth-child(2):hover{
+    background-position-y: -137px;
+}
+.footer .footer_r a:last-child{
+    background-position: -344px -91px;
+}
+.footer .footer_r a:last-child:hover{
+    background-position-y: -137px;
+}
 .footer_bottom{
     background: #fff;
-    width: 1000px;
+    width: 1011px;
     display: flex;
     margin: 0 0 0 174.5px;
     box-sizing: border-box;
+    padding-left: 53px;
 }
 .footer_bottom a{
     font-size: 12px;
