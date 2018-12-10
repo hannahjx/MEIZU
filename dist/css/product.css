@@ -1,0 +1,30 @@
+body, html {
+  background: #f8f8f8; }
+
+.main .main_nav {
+  line-height: 40px;
+  border-top: solid 1px #efefef;
+  border-bottom: solid 1px #efefef; }
+  .main .main_nav a {
+    color: #000; }
+  .main .main_nav a:nth-child(1) {
+    padding-right: 10px; }
+  .main .main_nav a:nth-child(2) {
+    padding-right: 5px; }
+  .main .main_nav a:nth-child(3) {
+    color: #999; }
+
+.main .main_kinds {
+  height: 84px;
+  background: #fff;
+  align-items: center;
+  padding: 20px 0; }
+  .main .main_kinds .main_kinds_pmcc {
+    line-height: 36px;
+    font-size: 14px;
+    padding-left: 20px; }
+    .main .main_kinds .main_kinds_pmcc span {
+      padding-right: 10px; }
+    .main .main_kinds .main_kinds_pmcc a {
+      color: #000;
+      margin-right: 60px; }

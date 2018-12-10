@@ -1,0 +1,42 @@
+body,html{
+    background: #f8f8f8;
+}
+.main{
+    .main_nav{
+        line-height: 40px;
+        border-top: solid 1px #efefef;
+        border-bottom: solid 1px #efefef;
+        a{
+            color: #000;
+        }
+        a:nth-child(1){
+            padding-right: 10px;
+        }
+        a:nth-child(2){
+            padding-right: 5px;
+        }
+        a:nth-child(3){
+            color: #999;
+        }
+    }
+    .main_kinds{
+        height:84px;
+        background: #fff;
+        align-items: center;
+        padding:20px 0;
+        .main_kinds_pmcc{
+            line-height: 36px;
+            font-size: 14px;
+            padding-left: 20px;
+            span{
+                padding-right: 10px;
+            }
+            a{
+                color: #000;
+                margin-right: 60px;
+            }
+           
+        }
+    }
+}
+    
