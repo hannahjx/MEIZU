@@ -539,7 +539,133 @@
 	bottom: 70px;
 }
 /* 页足样式 */
-.footer{
+#footer_wrapper{
 	height: 248px;
 	background: #fff;
+}
+.footer{
+	height: 248px;
+}
+.footer .footer_nav1{
+	height: 145px;
+	border-bottom:solid 1px #eeeeee;
+}
+.footer .footer_ul{
+	margin-top: 50px;
+	float: left;
+	width: 1000px;
+	height: 69px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.footer .footer_ul li a{
+	display: block;
+	width: 150px;
+	height: 69px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 11px;
+	color: #999999;
+}
+.footer .footer_ul li img{
+	width: 50px;
+	height: 39px;
+	margin-bottom: 5px;
+}
+.footer .footer_right{
+	margin-top: 30px;
+	float: right;
+	width: 162px;
+	height: 103px;
+	text-align: right;
+}
+.footer .footer_right p{
+	color: #999999;
+	font-size: 12px;
+    line-height: 30px;
+}
+.footer .footer_right span{
+	color: #00c3f5;
+    font-size: 24px;
+    font-weight: 400;
+    line-height:30px;
+}
+.footer .footer_right a{
+    padding: 0 16px;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 3px;
+    display: inline-block;
+    font-size: 14px;
+    background: #0bbbef;
+}
+.footer_info{
+	height: 105px;
+}
+.footer_info_ul{
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-start;
+	
+}
+.footer_info_ul li a{
+	padding-right: 10px;
+	vertical-align: middle;
+	font-size: 10px;
+	color: #999999;
+}
+.footer_info_ul li i{
+	display: inline-block;
+	width: 1px;
+	height: 18px;
+	border-right: solid 1px #999;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.footer_info_ul li a img{
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.subscribe{
+	line-height: 40px;
+	color: #999999;
+}
+.subscribe a{
+	color: #999999;
+	font-size: 10px;
+	padding-left: 10px;
+}
+.subscribe a img{
+	width: 19px;
+	height: 21px;
+	vertical-align: middle;
+}
+.subscribe i img{
+	width: 14px;
+	height: 18px;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+.subscribe_right{
+	width: 129px;
+	height: 28px;
+}
+.subscribe_right a{
+
+}
+.subscribe_right .weibo1{
+	
+	width: 21px;
+	height: 18px;
+	display: block;
+	background-size: cover;
+	background: url(../images/sign_up/base.png) no-repeat;
+	background-position:-218px -137px;
 }
