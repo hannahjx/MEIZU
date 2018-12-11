@@ -93,30 +93,37 @@
 	font-size: 24px;
 	margin: 0 15px 0 15px;
 }
+
 .nav .user_center:hover .user{
 	display: block;
 	color:lightskyblue;
+	height: 125px;
+}
+.user{
+	position: absolute;
+	top: 75px;
+	right: 24px;
+	width: 90px;
+	height:0px;
+	background: #fff;
+	text-align: center;
+	display: none;
+	border: solid 1px #efefef;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: all linear .5s;
+	
 }
 .nav .user_center .user li a:hover{
 	color:lightskyblue;
 	font-size: 12px;
-}
-.nav .user{
-	position: absolute;
-	top: 65px;
-	right: 7px;
-	width: 90px;
-	height: 110px;
-	background: #fff;
-	text-align: center;
-	display: none;
 }
 .nav .user li a{
 	display: block;
 	width: 90px;
 	color: #000;
 	font-size: 12px;
-	line-height: 27px;
+	line-height: 30px;
 }
 .nav .icon-gwc{
 	color: #666;
@@ -129,6 +136,7 @@
 	height: 15px;
 	border-radius: 50%;
 	background: #f00;
+	color: #fff;
 	position: absolute;
 	font-size: 8px;
 	text-align: center;
@@ -229,6 +237,7 @@
 	padding-bottom: 30px;
 }
 /* footer 部分------------------------------------------------ */
+<<<<<<< HEAD
 #footer-wrapper{
     height: 247px;
     background: #fff;
@@ -371,3 +380,5 @@
 #footer-wrapper .footer .footer-bottom p span{
     padding: 0 5px;
 }
+=======
+>>>>>>> 8b460c17974fb5eef668c6cf8cf9529887241d1d

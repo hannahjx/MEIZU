@@ -1,5 +1,5 @@
 <?php
-header("Content-type:text/html;charset=UTF-8");
+header("Content-type:text/html;charset=UTF-8;Access-Control-Allow-Origin: *");
 $username=$_GET['username'];
 
 $coon=new mysqli('localhost','root','','meizu',3306);

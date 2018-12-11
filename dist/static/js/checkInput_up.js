@@ -80,7 +80,7 @@ var checkInput_up=(function (){
                         res = JSON.parse(res);                        
                         if(res.code==0){
                             $form['onsubmit'] = 'return';
-                            $sub.innerHTML = '注册完成，立即登录';
+                            $sub.innerHTML = '注册完成，点击登录';
                             // window.location.href="http://localhost:8888/MEIZU/sign_in.html";
                         }else{
                             $error1.style.display="block";

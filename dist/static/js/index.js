@@ -60,6 +60,7 @@ var banner_swiper=(function(){
         init(ele){
             this.showIndex=0;
             this.$banners=$(ele);
+            showWidth=this.$banners.width();
             this.$lunbo=this.$banners.children('.lunbo');
             this.$imgAll=this.$lunbo.find('li');
             this.$btns=$('.banner_btn').find('li');
@@ -69,7 +70,6 @@ var banner_swiper=(function(){
             this.lastimg=this.$imgAll.last();
             this.$lunbo.append(this.firstimg.clone().css("zIndex",1));
             this.$lunbo.prepend(this.lastimg.clone().css("zIndex",8));
-            showWidth=this.$banners.width();
             this.$lunbo.css('left',-showWidth);      
             this.event();
             this.autoPlay(this.index);

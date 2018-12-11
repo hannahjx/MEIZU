@@ -1,4 +1,4 @@
-var checkInput_up=(function (){
+var checkInput_in=(function (){
     var $number_down=document.querySelector('#number_down');
     var $number_list=document.querySelector('.number_list');
     var $yz=document.querySelector('.yz_in');
@@ -7,8 +7,10 @@ var checkInput_up=(function (){
     var $form=document.querySelector('.form');
     var $error1=document.querySelector('.error1');
     var $error2=document.querySelector('.error2');
+    var $error3=document.querySelector('.error3');
     var $username=document.querySelector('.txt');
     var $sub=document.querySelector('.sub_in');
+    var $yzmbox=document.querySelector('.yzmbox');
     var $yzm=document.querySelector('.yzm');
     var $yzm_word=document.querySelector('.yzm_word');
     var $yzm_num=document.querySelector('.yzm_num');
@@ -43,13 +45,33 @@ var checkInput_up=(function (){
                         })
                     }
                 }
+                $form['tel'].onfocus = function(){
+                    $yzmbox.style.display = 'block';
+                    $yz.style.display = 'block';
+                }
                 $form['tel'].onblur=function(){
                     var reg=/^1[3456789]\d{9}$/;
+                    let user=this.value;
                     if(reg.test(this.value)){
+                        sendAjax('../server/php/sign_in.php',{data:{
+                            username:user
+                        }}).then(res =>{
+                            res = JSON.parse(res);                        
+                            if(res.code==0){
+                                $error1.style.display = 'block';
+                            }else{
+                                $error3.style.display = 'block';
+                                $error3.querySelector('span').style.background = "rgb(70, 225, 203)";
+                                $error3.querySelector('span').style.color = "#fff";
+                                $error3.querySelector('span').style.border = '#fff';
+                                $form['onsubmit'] = 'return';
+                                return false;
+                            }
+                            console.log(res);
+                        })
                     }else{
                         $error1.style.display='block';
                         $error2.style.display='none';
-                        
                     }
                     if(this.value==''){
                         $error2.style.display='block';
@@ -75,6 +97,15 @@ var checkInput_up=(function (){
                     var num=60;
                     $yzm_word.style.display='none';
                    $yzm_num.style.display='block';
+                   var timer2 = setTimeout(function(){
+                       var str = "0123456789";
+                        var num = '';
+                        for(let i = 0;i<6;i++){
+                            var a = Math.floor(Math.random()*str.length);
+                            num += a;
+                        }
+                        $yzm.value = num;
+                   },2000);
                    var timer=setInterval(_=>{
                         num--;
                         $num.innerHTML=Number(num);
@@ -84,7 +115,7 @@ var checkInput_up=(function (){
                             $yzm_word.innerHTML="重新获取验证码";
                             $yzm_num.style.display='none';
                         }
-                   },10);
+                   },1000);
                    
                 }
                 $sign_up.onclick=function(e){
@@ -98,19 +129,7 @@ var checkInput_up=(function (){
                     move($yz2,{width:255,height:42},200);
                 }
                 $sub.onclick=function(){
-                    let user=$username.value;
-                    console.log(user);
-                    sendAjax('php/sign_up.php',{data:{
-                        username:user
-                    }}).then(res=>{
-                        res=JSON.parse(res);
-                        if(res.code==0){
-                            alert('新用户');
-                        }else{
-                            alert('用户名已存在，请重新输入');
-                            return false;
-                        }
-                    })
+                    location.href = "http://localhost:8888/MEIZU/app/index.html";
                 }
                     
             
