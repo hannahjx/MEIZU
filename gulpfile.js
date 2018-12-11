@@ -5,14 +5,14 @@ const concat= require('gulp-concat'); //文件合并
 const watch= require ('gulp-watch') ; //监听文件
 const minihtml = require('gulp-htmlmin');//压缩HTML文件
 const uglify=require('gulp-uglify');//压缩js文件
-const cleanCSS = require('gulp-clean-css');//压缩css文件
+// const cleanCSS = require('gulp-clean-css');//压缩css文件
 const imagemin = require('gulp-imagemin');//压缩图片
 const connect = require('gulp-connect');//服务器
 const rev = require('gulp-rev');//生成hash后缀
 const del = require('del');//删除文件
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
-const clean = require('gulp-clean');//清除文件夹
+// const clean = require('gulp-clean');//清除文件夹
 const runSequence = require('run-sequence');//异步改同步执行
 
 //压缩html
