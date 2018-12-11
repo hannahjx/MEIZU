@@ -1,78 +1,93 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-const babel = require('gulp-babel');
-const connect = require('gulp-connect');
-var watch = require('gulp-watch');
-const htmlmin = require('gulp-htmlmin');
-const imagemin = require('gulp-imagemin');
-const rev = require('gulp-rev');
-const del = require('del');
-var revCollector = require('gulp-rev-collector');
-var runSequence = require('run-sequence');
-var csso = require('gulp-csso');
 
-gulp.task('default', ['minihtml','minijs','minicss','miniimg','watch','connect']);
+const gulp = require('gulp');//基础库,全局gulp
+const babel = require('gulp-babel');//转义
+const concat= require('gulp-concat'); //文件合并
+const watch= require ('gulp-watch') ; //监听文件
+const minihtml = require('gulp-htmlmin');//压缩HTML文件
+const uglify=require('gulp-uglify');//压缩js文件
+// const cleanCSS = require('gulp-clean-css');//压缩css文件
+const imagemin = require('gulp-imagemin');//压缩图片
+const connect = require('gulp-connect');//服务器
+const rev = require('gulp-rev');//生成hash后缀
+const del = require('del');//删除文件
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+// const clean = require('gulp-clean');//清除文件夹
+const runSequence = require('run-sequence');//异步改同步执行
 
-gulp.task('minicss', function () {
-    // 将你的默认的任务代码放在这
-    gulp.src('app/static/css/*.css')
-    .pipe(csso())
-    .pipe(gulp.dest('dist'));
-});
-gulp.task('minihtml', function () {
-    // 将你的默认的任务代码放在这
-    gulp.src('app/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'));
-});
-gulp.task('minijs', function () {
-    // 将你的默认的任务代码放在这
-    gulp.src(['app/**/js/*.js']) //获取文件，同时过滤掉.min.js文件
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
-        .pipe(connect())
-        .pipe(rev())
-        .pipe(gulp.dest('dist'))
-        .pipe(rev.manifest())
-        .pipe(gulp.dest('rev/static/js'));
-});
-// gulp.task('mini',['minicss','minihtml','minijs'],function () {
-//     // 将你的默认的任务代码放在这
-//     console.log('压缩完成');
-// });
-gulp.task('watch', function () {
-    gulp.watch('app/*.html', ['minihtml'])
-    gulp.watch('app/**/*.js', ['minijs'])
+//压缩html
+// gulp.task('minihtml',function(){
+//     gulp.src('app/**/*.html')//找到文件
+//     .pipe(concat('app/**/*.html'))//合并文件
+//     .pipe(babel({
+//         presets: ['@babel/env']//转义
+//     }))
+//     .pipe(rev())//生成hash后缀
+//     .pipe(htmlmin({ collapseWhitespace: true }))//压缩
+//     .pipe(gulp.dest('dist'))//输出
+//     .pipe(connect.reload());//热更新
+// })
+//压缩css
+// gulp.task('cleanCSS',function(){
+//     gulp.src('app/static/css/*.css')
+//     .pipe(concat('app/static/css/*.css'))//合并文件
+//     .pipe(babel({
+//         presets: ['@babel/env']
+//     }))
+//     .pipe(rev())
+//     .pipe(cleanCSS({compatibility: 'ie8'}))
+//     .pipe(gulp.dest('dist'))
+//     .pipe(connect.reload());
+// })
+//压缩js
+// gulp.task('minijs',function () {
+//     gulp.src('app/static/js/*.js')
+//     .pipe(concat('app/static/js/*.js')) 
+//     .pipe(babel({
+//         presets: ['@babel/env']
+//     }))
+//     .pipe(rev())
+//     .pipe(uglify())
+//     .pipe(gulp.dest('dist'))
+//     .pipe(connect.reload());
+//   })
+//压缩图片
+// gulp.task('imagemin',function () {
+//     gulp.src('app/static/images/*.js')
+//     .pipe(concat('app/static/images/*.js')) 
+//     .pipe(babel({
+//         presets: ['@babel/env']
+//     }))
+//     .pipe(rev())
+//     .pipe(imagemin())
+//     .pipe(gulp.dest('dist'))
+//     .pipe(connect.reload());
+//   })
+//清除文件
+// gulp.task('del', function () {
+//     del('dist','rev');
+// })
+//异步改同步执行
+// gulp.task('build', function(callback) {
+    //     runSequence('del',
+    //         ['minicss', 'minijs'],
+    //         'minihtml',
+    //         callback);
+    //   });
+    gulp.task('del', function () {
+        del('dist','rev');
+    })
+//监听文件
+gulp.task('devwatch',function(){
+    gulp.watch('app/**/*.*',['all','sass'])
 })
-gulp.task('connect', function () {
+//开启服务器
+gulp.task('connect',function(){
     connect.server({
         root: 'dist',
-        port: 1111,
+        port: '7777',
         livereload: true
     });
-})
-
-gulp.task('miniimg', () =>
-    gulp.src('app/static/images/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
-);
-
-gulp.task('del', function () {
-    del('dist','rev');
-})
-
-// 同步执行  中括号中为异步执行
-gulp.task('build', function (callback) {
-    runSequence('del',
-        ['minicss', 'minijs'],
-        'minihtml',
-        callback);
-});
-gulp.task('devwatch', function () {
-    gulp.watch('app/**/*.*', ['all','sass'])
 })
 gulp.task('all',function () {
     gulp.src('app/**/*.*')
@@ -85,5 +100,9 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('dist/css'));
 });
 gulp.task('dev',function () {
-    runSequence('del','all','connect','devwatch')
+    runSequence('del','all','sass','connect','devwatch')
 })
+  //开发环境使用
+// gulp.task('dev', ['clean','all','watch','connect']);
+//正式环境使用
+// gulp.task('proud', ['clean','all','watch','connect']);

@@ -110,7 +110,7 @@
 .nav .user{
 	position: absolute;
 	top: 65px;
-	right: 7px;
+	right:21px;
 	width: 90px;
 	height: 110px;
 	background: #fff;
@@ -605,13 +605,44 @@
     background: #0bbbef;
 }
 .footer_info{
-	height: 105px;
+	height: 80px;
+}
+.footer_info a:hover{
+	color: #00b9f2;
 }
 .footer_info_ul{
 	margin-top: 30px;
 	display: flex;
 	justify-content: flex-start;
 	
+}
+.footer .footer_info_ul .language{
+	position: relative;
+}
+.footer .footer_info_ul .language:hover .language_ul{
+	display: block;
+}
+.footer .footer_info_ul .language .language_ul{
+	height: 200px;
+    width: 102px;
+	position: absolute;
+	top:-202px;
+	left: -14px;
+	background: #fff;
+	border: solid 1px #eeeeee;
+	border-bottom: none;
+	z-index: 99;
+	text-align: center;
+	display: none;
+}
+.footer .footer_info_ul .language .language_ul li{
+	width: 108px;
+	line-height:30px;
+}
+.footer .footer_info_ul .language .language_ul li img{
+	margin-right: 8px;
+	width: 23px;
+	height: 23px;
 }
 .footer_info_ul li a{
 	padding-right: 10px;
@@ -643,29 +674,82 @@
 	padding-left: 10px;
 }
 .subscribe a img{
-	width: 19px;
-	height: 21px;
+	/* width: 19px;
+	height: 21px; */
 	vertical-align: middle;
 }
 .subscribe i img{
 	width: 14px;
-	height: 18px;
+	height: 18px; 
 	vertical-align: middle;
 	margin: 0 5px;
 }
+.subscribe .dp_logo2,.bz_logo2,.xin_logo2{
+	display: none;
+}
+.subscribe .dp_logo:hover .dp_logo2{
+display: inline-block;
+}
+.subscribe .dp_logo:hover .dp_logo1{
+	display: none;
+}
+.subscribe .bz_logo:hover .bz_logo2{
+	display: inline-block;
+}
+.subscribe .bz_logo:hover .bz_logo1{
+	display: none;
+}
+.subscribe .xin_logo:hover .xin_logo2{
+	display: inline-block;
+}
+.subscribe .xin_logo:hover .xin_logo1{
+	display: none;
+}
 .subscribe_right{
+	float: right;
 	width: 129px;
 	height: 28px;
+	position: relative;
 }
 .subscribe_right a{
-
-}
-.subscribe_right .weibo1{
-	
+	float: left;
 	width: 21px;
 	height: 18px;
+}
+.subscribe_right .subscribe_right2{
+	position: relative;
+}
+.subscribe_right .subscribe_right2 .wechat3{
+	position: absolute;
+	top: -170px;
+	left: -115px;
+	display: none;
+}
+.subscribe_right .subscribe_right2 .wechat3 img{ 
+	width: 180px;
+	height:180px;
+}
+.subscribe_right .weibo2,.wechat2,.QQkj2{
+	display: none;
+}
+.subscribe_right .subscribe_right1:hover .weibo2{
 	display: block;
-	background-size: cover;
-	background: url(../images/sign_up/base.png) no-repeat;
-	background-position:-218px -137px;
+}
+.subscribe_right .subscribe_right1:hover .weibo1{
+	display: none;
+}
+.subscribe_right .subscribe_right2:hover .wechat2{
+	display: block;
+}
+.subscribe_right .subscribe_right2:hover .wechat3{
+	display: block;
+}
+.subscribe_right .subscribe_right2:hover .wechat1{
+	display: none;
+}
+.subscribe_right .subscribe_right3:hover .QQkj2{
+	display: block;
+}
+.subscribe_right .subscribe_right3:hover .QQkj1{
+	display: none;
 }
