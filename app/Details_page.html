@@ -117,13 +117,23 @@
         <div class="main content clearfix">
             <div class="main_img">
                 <div class="big_img">
-                    <a href=""><img src="static/images/details/bai1.jpg" alt=""></a>
+                    <a href="" style="z-index:9;opacity:1"><img src="static/images/details/bai1.jpg" alt=""></a>
+                    <a style="z-index:8;"><img src="static/images/details//bai3.jpg" alt=""></a>
+                    <a style="z-index:7;"><img src="static/images/details//bai4.jpg" alt=""></a>
+                    <a style="z-index:6;"><img src="static/images/details//bai5.jpg" alt=""></a>
+                    <div class="magnifier"></div>
+                </div>
+                <div class="amplification">
+                    <img class="bigimages" style="display: block" src="static/images/details/bai1.jpg">
+                    <img class="bigimages" src="static/images/details/bai3.jpg">
+                    <img class="bigimages" src="static/images/details/bai4.jpg">
+                    <img class="bigimages" src="static/images/details/bai5.jpg">
                 </div>
                 <div class="small_img">
-                    <div><a class="active"><img src="static/images/details//bai2.jpg" alt=""></a></div>
-                    <div><a><img src="static/images/details//bai3.jpg" alt=""></a></div>
-                    <div><a><img src="static/images/details//bai4.jpg" alt=""></a></div>
-                    <div><a><img src="static/images/details//bai5.jpg" alt=""></a></div>
+                    <div class="active"><a><img src="static/images/details//bai1.jpg" alt=""></a></div>
+                    <div class="active"><a><img src="static/images/details//bai3.jpg" alt=""></a></div>
+                    <div class="active"><a><img src="static/images/details//bai4.jpg" alt=""></a></div>
+                    <div class="active"><a><img src="static/images/details//bai5.jpg" alt=""></a></div>
                 </div>
             </div>
             <div class="main_des">
@@ -339,6 +349,7 @@
     <script>
         xuanze.init('.xuanze');
         stick.init('#details_wrapper');
+        main_img.init('.main_img');
     </script>
 </body>
 
