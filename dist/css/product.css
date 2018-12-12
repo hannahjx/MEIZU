@@ -63,73 +63,75 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-  .main .main_product .main_product_ul li a {
-    width: 301px;
-    height: 416px;
-    background: #fff;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; }
-    .main .main_product .main_product_ul li a .show_box {
-      width: 240px;
-      height: 240px;
+  .main .main_product .main_product_ul li {
+    margin-bottom: 10px; }
+    .main .main_product .main_product_ul li a {
+      width: 301px;
+      height: 416px;
+      background: #fff;
       position: relative;
-      overflow: hidden; }
-      .main .main_product .main_product_ul li a .show_box li {
-        position: absolute;
-        top: 0px;
-        left: 0px; }
-    .main .main_product .main_product_ul li a .contrast {
-      position: absolute;
-      top: 16px;
-      left: 18px;
-      color: #000;
-      z-index: 10; }
-      .main .main_product .main_product_ul li a .contrast img {
-        margin-right: 5px;
-        vertical-align: middle;
-        padding-bottom: 3px; }
-    .main .main_product .main_product_ul li a .contrast:hover {
-      color: #00c3f5; }
-    .main .main_product .main_product_ul li a .products {
-      margin-top: 10px; }
-    .main .main_product .main_product_ul li a .product_show {
-      width: 200px;
-      height: 42px;
-      margin-top: 10px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center; }
-      .main .main_product .main_product_ul li a .product_show li {
-        float: left;
-        width: 40px;
-        height: 40px;
-        padding: 1px;
-        border: solid 1px #efefef;
-        border-radius: 5px; }
-        .main .main_product .main_product_ul li a .product_show li img {
+      .main .main_product .main_product_ul li a .show_box {
+        width: 240px;
+        height: 240px;
+        position: relative;
+        overflow: hidden; }
+        .main .main_product .main_product_ul li a .show_box li {
+          position: absolute;
+          top: 0px;
+          left: 0px; }
+      .main .main_product .main_product_ul li a .contrast {
+        position: absolute;
+        top: 16px;
+        left: 18px;
+        color: #000;
+        z-index: 10; }
+        .main .main_product .main_product_ul li a .contrast img {
+          margin-right: 5px;
+          vertical-align: middle;
+          padding-bottom: 3px; }
+      .main .main_product .main_product_ul li a .contrast:hover {
+        color: #00c3f5; }
+      .main .main_product .main_product_ul li a .products {
+        margin-top: 10px; }
+      .main .main_product .main_product_ul li a .product_show {
+        width: 200px;
+        height: 42px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .main .main_product .main_product_ul li a .product_show li {
+          float: left;
           width: 40px;
-          height: 40px; }
-      .main .main_product .main_product_ul li a .product_show li:hover {
-        box-shadow: none; }
-    .main .main_product .main_product_ul li a .xh {
-      line-height: 45px;
-      color: #000; }
-    .main .main_product .main_product_ul li a .product_title {
-      width: 241px;
-      color: #999;
-      font-size: 11px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .main .main_product .main_product_ul li a .product_price {
-      line-height: 45px;
-      color: #E02B41;
-      font-size: 18px; }
-      .main .main_product .main_product_ul li a .product_price i {
-        font-size: 14px; }
+          height: 40px;
+          padding: 1px;
+          border: solid 1px #efefef;
+          border-radius: 5px; }
+          .main .main_product .main_product_ul li a .product_show li img {
+            width: 40px;
+            height: 40px; }
+        .main .main_product .main_product_ul li a .product_show li:hover {
+          box-shadow: none; }
+      .main .main_product .main_product_ul li a .xh {
+        line-height: 45px;
+        color: #000; }
+      .main .main_product .main_product_ul li a .product_title {
+        width: 241px;
+        color: #999;
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .main .main_product .main_product_ul li a .product_price {
+        line-height: 45px;
+        color: #E02B41;
+        font-size: 18px; }
+        .main .main_product .main_product_ul li a .product_price i {
+          font-size: 14px; }
   .main .main_product .main_product_ul li:hover {
     box-shadow: 0px 9px 10px #d6d4d4; }
 

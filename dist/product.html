@@ -80,8 +80,8 @@
                         </li>
                     </ul>
 
-                    <input type="text" class="search" placeholder="魅族16th" />
-                    <a href="#" class="fdj"><img src="static/images/fdj.png" /></a>
+                    <input type="text" class="search" placeholder="魅族16th" id="inp"/>
+                    <a class="fdj" style="display:inline-block;cursor: pointer"><img src="static/images/fdj.png" /></a>
                     <div class="user_center">
                         <a href="#" class="iconfont icon-wd"></a>
                         <ul class="user">
@@ -156,7 +156,7 @@
                         <p class="product_title">国民拍照全面屏手机&nbsp;全像素双核对焦&nbsp;大电池长续航</p>
                         <p class="product_price"><i>￥</i>999</p>
                     </a></li>
-                    <li><a href="#">
+                    <!-- <li><a href="#">
                         <ul class="show_box">
                             <li><img class="products" src="static/images/pic81.jpg"/></li>
                             <li><img class="products" src="static/images/pic82.jpg"/></li>
@@ -212,7 +212,7 @@
                         <p class="xh">魅族&nbsp;Note8</p>
                         <p class="product_title">国民拍照全面屏手机&nbsp;全像素双核对焦&nbsp;大电池长续航</p>
                         <p class="product_price"><i>￥</i>999</p>
-                    </a></li>
+                    </a></li> -->
                 </ul>
             </div>
             <div class="main_product2">
@@ -319,6 +319,7 @@
 <script src="static/js/jquery.js"></script>
 <script src="static/js/product.js"></script>
 <script>
-main.init('.main');
+    dataRender.init('#inp');
+    main.init('.main');
 </script>
 </html>

@@ -13,7 +13,7 @@
     <div id="nav_wrapper">
         <div class="nav content">
             <div class="logo">
-                <a target="_blank" href="http://localhost:8888/MEIZU/app/" class="logo-link" alt="魅族科技" >
+                <a target="_blank" href="index.html" class="logo-link" alt="魅族科技" >
                     <img src="static/images/log01.png" style="max-width:125px;margin-top:  28px;">
                 </a>
             </div>
@@ -49,7 +49,7 @@
     <div id="main-wrapper">
         <div class="main content">
             <div class="main-content">
-                <div class="empty-car">
+                <!-- <div class="empty-car">
                     <div class="carimg">
                         <img src="static/images/car.png" alt="">
                     </div>
@@ -57,6 +57,53 @@
                         <p>购物车内还没有商品，赶紧去选购吧~</p>
                         <a href="http://localhost:8888/MEIZU/app/" class="tip-btn">返回商城首页</a>
                     </div>
+                </div> -->
+                <div class="product">
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" checked="checked" class="check-all">全选</td>
+                            <td>单价(元)</td>
+                            <td>数量</td>
+                            <td>小计(元)</td>
+                            <td>编辑</td>
+                        </tr>
+                    </table>
+                    <ul class="showlist">
+                        <li class="item">
+                            <div class="showdata">
+                                <input type="checkbox" checked="checked" class="check-ge">
+                                <a href=""><img src="static/images/product/phone01.jpg" alt=""></a>
+                                <div>
+                                    <h3>魅族 16th</h3>
+                                    <p>全网通公开版 远山白 6G+64G</p>
+                                </div>
+                            </div>
+                            <div class="price">￥2698</div>
+                            <div class="amount">
+                                <button class="reduce">-</button>
+                                <input type="text" name="amt" id="inp" value="1">
+                                <button class="push">+</button>
+                            </div>
+                            <div class="he">￥2698</div>
+                            <div class="edit">--<i><img src="static/images/close.png" alt=""></i></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="settlement">
+                <div class="sett-left">
+                    <div class="check">
+                        <input type="checkbox" class="check-all">全选
+                    </div>
+                    <span class="del">删除选中的商品</span>
+                    <span class="gongji">共1件商品， 已选择1件</span>
+                </div>
+                <div class="sett-right">
+                    <span class="car-sum">
+                        已优惠 <span class="car-num red" id="totalDiscount">0.00</span> 元，
+                        合计(不含运费)：<span class="car-total" id="totalPrice">￥ 2698.00</span>
+                    </span>
+                    <div class="sett-btn">去结算</div>
                 </div>
             </div>
         </div>
@@ -114,6 +161,11 @@
             </div>
         </div>
     </div>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/shopcar.js"></script>
+    <script>
+        click.init();
+    </script>
 </body>
 </html>
           
