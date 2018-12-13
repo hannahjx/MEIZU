@@ -239,31 +239,35 @@
 #banner_wrapper{
 	height:670px;
 	width: 100%;
+	margin: 0 auto;
 }
 .banners{
-	height:670px;
-	width: 100%;
-	overflow: hidden;
-	position: relative;
+	margin: 0 auto;
+	height: 670px;
+	width:100%;
+    /* max-width: 2522px; */
+    overflow: hidden;
+    position: relative;
 }
 .banners .lunbo{
 	height:100%;
-	width: 99999px;
+	width: 800%;
 	position: absolute;
-	top:0;
-	left:0;
+	left: 0;
 }
 .banners .lunbo li{
+	margin: 0 auto;
 	float: left;
+	width:12.5%;
 	height: 100%;
-	width: 1349px;
 	overflow: hidden;
 	position: relative;
 }
 .banners .lunbo li img{
-	height:670px;
+	height: 100%;
 	position: absolute;
-	left: -560px;
+	top:0;
+	left:-50%;
 }
 .banners .banner_btn{
 	width: 150px;
@@ -290,6 +294,14 @@
 	border: solid 1px #fff;
 	border-radius: 50%;
 }
+
+
+
+
+
+
+
+
 /* main_content内容样式 */
 .con_nav{
 	width: 100%;

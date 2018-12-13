@@ -52,7 +52,7 @@ var nav_swiper=(function(){
     }
 }())
 nav_swiper.init('.nav');
-//banner区域
+//banner区域--------------------------------------------
 var banner_swiper=(function(){
     var timer = null;
     var showWidth = null;
@@ -61,27 +61,22 @@ var banner_swiper=(function(){
             this.showIndex=0;
             this.$banners=$(ele);
             showWidth=this.$banners.width();
+            console.log(showWidth);
             this.$lunbo=this.$banners.children('.lunbo');
             this.$imgAll=this.$lunbo.find('li');
+            this.$imgAll.css('left',-((2526-showWidth)*2));
             this.$btns=$('.banner_btn').find('li');
-            console.log(this.$btns);
+            console.log(this.$imgAll);
             //克隆
             this.firstimg= this.$imgAll.first();
             this.lastimg=this.$imgAll.last();
-            this.$lunbo.append(this.firstimg.clone().css("zIndex",1));
-            this.$lunbo.prepend(this.lastimg.clone().css("zIndex",8));
-            this.$lunbo.css('left',-showWidth);      
+            this.$lunbo.append(this.firstimg.clone());
+            this.$lunbo.prepend(this.lastimg.clone());     
             this.event();
             this.autoPlay(this.index);
         },
         event(){
             var _this=this;
-            // _this.$btns.on('click','li',function(){
-			// 	_this.showIndex=$(this).index();
-			// 	console.log(_this.showIndex);
-			// 	// _this.showImages(showIndex);
-			// 	// _this.autoPlay(showIndex);
-            // })
             this.$btns.on('click', function () {
                 var index = $(this).index();
                 // clearInterval(timer)
@@ -102,7 +97,7 @@ var banner_swiper=(function(){
             this.index = index;
             this.$btns.eq(index).addClass('btns').siblings().removeClass('btns');
             this.$lunbo.animate({
-                left: -showWidth * (index + 1)
+                left: -showWidth * (index)
             }, 800)
         },
         autoPlay(index){
