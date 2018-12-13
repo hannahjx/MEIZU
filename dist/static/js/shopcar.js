@@ -51,6 +51,9 @@ var showlist = (function(){
             fn();
             var $checkAll = $('.check-all');
             var $allInput = $('.check-ge');
+            $('.sett-btn').click(function(){
+                alert('没钱还想买东西？');
+            })
             $checkAll.click(function () {
                 if ($(this).prop('checked')) {
                     $allInput.prop('checked', 'true');
@@ -112,4 +115,4 @@ function tot(){
             }
             tot = '￥ ' + tot;
             $total.html(tot);
-}
+} 

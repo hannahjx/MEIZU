@@ -73,7 +73,7 @@ var dataRender = (function(){
                     }
                     $p1.text(result[i].name);
                     $p2.text(result[i].goods_tag);
-                    $p3.text(result[i].skuprice);
+                    $p3.text(result[i].price);
                     _this.listBox.append($li);
                     $li.append($a);
                     $a.append($ul1);
