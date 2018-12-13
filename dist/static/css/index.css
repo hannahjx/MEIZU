@@ -85,12 +85,15 @@
 	padding-left: 15px;
 	position: relative;
 }
-.nav .fdj img{
-	width: 15px;
-	height:15px;
+.nav .fdj{
+	display: block;
 	position: absolute;
 	right: 100px;
 	top: 33px;
+}
+.nav .fdj img{
+	width: 15px;
+	height:15px;	
 }
 .nav .icon-wd{
 	display: block;
