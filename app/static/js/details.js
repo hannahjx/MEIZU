@@ -12,7 +12,7 @@ var xuanze = (function(){
             this.$xzxh = $('.xhbox .box-active');
             this.name = this.$xzxh.html();
             this.$carbtn = $('.car-btn');
-            this.data = []; 
+            this.data = null; 
             this.event();
         },
         event() {
@@ -20,7 +20,19 @@ var xuanze = (function(){
             this.$xhbox.on('click','div',function(){
                 $(this).addClass('box-active').siblings().removeClass();
                 _this.$xzxh = $('.xhbox .box-active');
-                _this.name = _this.$xzxh.html();               
+                _this.name = _this.$xzxh.html();
+                $.ajax({
+                    url: "static/json/data.json",
+                    success: function (res) {
+                        for(var i = 0;i<res.length;i++){
+                            if(res[i].name == _this.name){
+                                $('.destille').html(res[i].name);
+                                $('.price').html(res[i].price);
+                                $('.showimg').attr('src',res[i].img[0]);
+                            }
+                        }
+                    }
+                });               
             })
             this.$reduce.on('click',function(){
                 let num = Number(_this.$num.val());
@@ -52,8 +64,7 @@ var xuanze = (function(){
                     for(var i = 0;i<res.length;i++){
                         if(res[i].name == _this.name){
                             res[i].count = Number($('.sl').val());
-                            _this.data.pop();
-                            _this.data.push(res[i]);
+                            _this.data = res[i];
                         }
                     }
                     console.log(_this.data);
@@ -67,9 +78,9 @@ var xuanze = (function(){
             shopList = JSON.parse(shopList);
             // debugger
             for(var i = 0;i<shopList.length;i++){
-                console.log(shopList[i][0].id);
-                if(data[0].id == shopList[i][0].id){
-                    shopList[i][0].count = data[0].count;
+                console.log(shopList[i].id);
+                if(data.id == shopList[i].id){
+                    shopList[i].count = data.count;
                     break;
                 }
             }
@@ -114,7 +125,6 @@ var main_img=(function(){
             this.$amplification=this.$main_img.find('.amplification');
             this.$bigimages=this.$amplification.find('.bigimages');
             this.img = this.$amplification.find('img'); 
-            console.log(this.img);
             this.event();
         },
         event(){

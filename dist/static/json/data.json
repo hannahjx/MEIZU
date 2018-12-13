@@ -22,7 +22,7 @@
 }, {
     "id": "4",
     "name": "魅族 16th Plus",
-    "price":0,
+    "price":"￥ 9999",
     "goods_tag": "高清双摄 指纹+人脸双解锁",
     "img": ["static/images/product/phone31.jpg","static/images/product/phone32.jpg","static/images/product/phone33.jpg","static/images/product/phone34.jpg"]
 }, {
