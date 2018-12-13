@@ -64,16 +64,14 @@ var banner_swiper=(function(){
             console.log(showWidth);
             this.$lunbo=this.$banners.children('.lunbo');
             this.$imgAll=this.$lunbo.find('li');
-            // this.$imgAll.css('left',-((2522-showWidth)*2));
-            this.$imgAll.css('left',-2523);
+            this.$imgAll.css('left',-((2526-showWidth)*2));
             this.$btns=$('.banner_btn').find('li');
             console.log(this.$imgAll);
             //克隆
             this.firstimg= this.$imgAll.first();
             this.lastimg=this.$imgAll.last();
-            this.$lunbo.append(this.firstimg.clone().css("zIndex",1));
-            this.$lunbo.prepend(this.lastimg.clone().css("zIndex",8));
-            // this.$lunbo.css('left',-showWidth*2);      
+            this.$lunbo.append(this.firstimg.clone());
+            this.$lunbo.prepend(this.lastimg.clone());     
             this.event();
             this.autoPlay(this.index);
         },
@@ -99,7 +97,7 @@ var banner_swiper=(function(){
             this.index = index;
             this.$btns.eq(index).addClass('btns').siblings().removeClass('btns');
             this.$lunbo.animate({
-                left: -showWidth * (index + 1)
+                left: -showWidth * (index)
             }, 800)
         },
         autoPlay(index){
