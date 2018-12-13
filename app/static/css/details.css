@@ -263,7 +263,33 @@
     margin-left: 10px;
     margin-bottom: 60px;
 }
-#main-wrapper .main .main_des .buy a{
+#main-wrapper .main .main_des .buy .alert{
+    display: none;
+    background: #fff;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 160px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+}
+#main-wrapper .main .main_des .buy .alert h4{
+    font-size: 16px;
+    margin-bottom: 20px; 
+}
+#main-wrapper .main .main_des .buy .alert i{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+}
+#main-wrapper .main .main_des .buy>a{
     display: inline-block;
     padding: 15px 0;
     width: 208px;

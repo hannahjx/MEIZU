@@ -1,57 +1,56 @@
 [{
-    "skuid": "10167",
+    "id": "1",
     "name": "魅族 Note8",
-    "skuprice": "￥ 1298",
+    "price": "￥ 1298",
+    "count": 0,
     "goods_tag": "国民拍照全面屏手机 全像素双核对焦 大电池长续航",
-    "priceGetStart": false,
     "img": ["static/images/product/phone01.jpg","static/images/product/phone02.jpg","static/images/product/phone03.jpg","static/images/product/phone04.jpg"]
 }, {
-    "skuid": "9847",
+    "id": "2",
     "name": "魅族 16 X",
-    "skuprice": "￥ 2098",
+    "price": "￥ 2098",
+    "count": 0,
     "goods_tag": "高通骁龙710 屏下指纹 旗舰双摄",
-    "priceGetStart": false,
     "img": ["static/images/product/phone11.jpg","static/images/product/phone12.jpg","static/images/product/phone13.jpg"]
 }, {
-    "skuid": "9853",
+    "id": "3",
     "name": "魅族 V8 高配版",
-    "skuprice": "￥ 1098",
+    "price": "￥ 1098",
+    "count": 0,
     "goods_tag": "骁龙710处理器 人脸指纹双解锁 旗舰双摄",
-    "priceGetStart": false,
     "img": ["static/images/product/phone21.jpg","static/images/product/phone22.jpg","static/images/product/phone23.jpg","static/images/product/phone24.jpg"]
 }, {
-    "skuid": "10035",
-    "name": "魅族 X8",
-    "skuprice": "￥ 1598",
+    "id": "4",
+    "name": "魅族 16th Plus",
+    "price":0,
     "goods_tag": "高清双摄 指纹+人脸双解锁",
-    "priceGetStart": false,
     "img": ["static/images/product/phone31.jpg","static/images/product/phone32.jpg","static/images/product/phone33.jpg","static/images/product/phone34.jpg"]
 }, {
-    "skuid": "9161",
+    "id": "5",
     "name": "魅族 16th",
-    "skuprice": "￥ 2698",
+    "price": "￥ 2698",
+    "count": 0,
     "goods_tag": "骁龙845 AI加速 屏幕下指纹 AI双摄光学防抖",
-    "priceGetStart": false,
     "img": ["static/images/product/phone01.jpg","static/images/product/phone02.jpg","static/images/product/phone03.jpg","static/images/product/phone04.jpg"]
 }, {
-    "skuid": "7119",
+    "id": "6",
     "name": "魅族 15",
-    "skuprice": "￥ 2499",
+    "price": "￥ 2499",
+    "count": 0,
     "goods_tag": "国民拍照全面屏手机 全像素双核对焦 大电池长续航",
-    "priceGetStart": false,
     "img": ["static/images/product/phone11.jpg","static/images/product/phone12.jpg","static/images/product/phone13.jpg"]
 }, {
-    "skuid": "6815",
+    "id": "7",
     "name": "魅族 M15",
-    "skuprice": "￥ 1799",
+    "price": "￥ 1799",
+    "count": 0,
     "goods_tag": "国民拍照全面屏手机 全像素双核对焦 大电池长续航",
-    "priceGetStart": false,
     "img": ["static/images/product/phone21.jpg","static/images/product/phone22.jpg","static/images/product/phone23.jpg","static/images/product/phone24.jpg"]
 }, {
-    "skuid": "7519",
+    "id": "8",
     "name": "魅族 15 Plus",
-    "skuprice": "￥ 799",
+    "price": "￥ 799",
+    "count": 0,
     "goods_tag": "国民拍照全面屏手机 全像素双核对焦 大电池长续航",
-    "priceGetStart": false,
     "img": ["static/images/product/phone31.jpg","static/images/product/phone32.jpg","static/images/product/phone33.jpg","static/images/product/phone34.jpg"]
 }]

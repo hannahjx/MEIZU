@@ -93,7 +93,7 @@
                             <li><a href="#">M码通道</a></li>
                         </ul>
                     </div>
-                    <a href="#" class="iconfont icon-gwc"><span class="num"><i>0</i></span></a>
+                    <a href="shop_car.html" class="iconfont icon-gwc"><span class="num"><i>0</i></span></a>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@
                         <dd>
                             <div class="n-box">
                                 <button class="reduce">-</button>
-                                <input type="text" value="1" name="number" min="1" />
+                                <input type="text" value="0" name="number" min="1" class="sl"/>
                                 <button class="push">+</button>
                             </div>   
                         </dd>
@@ -217,6 +217,11 @@
                     <div class="buy">
                         <a class="buy-btn">立即购买</a>
                         <a class="car-btn">加入购物车</a>
+                        <div class="alert">
+                            <h4>已成功加入购物车</h4>
+                            <p><a href="shop_car.html">去购物车结算&gt;</a></p>
+                            <i class="car-close"><img src="static/images/close1.png" alt=""></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -339,6 +344,7 @@
     <script>
         xuanze.init('.xuanze');
         stick.init('#details_wrapper');
+        shop.init();
     </script>
 </body>
 
